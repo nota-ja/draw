@@ -15,6 +15,10 @@ var settings = require('./src/util/Settings.js'),
     http = require('http'),
     https = require('https');
 
+if (process.env.PORT) {
+    settings.port = process.env.PORT;
+}
+
 /** 
  * SSL Logic and Server bindings
  */ 
